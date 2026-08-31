@@ -1,0 +1,448 @@
+.invitation-cover {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    z-index: 9999;
+
+    background: #690016;
+}
+
+/* -------------------- */
+/* CURTAINS */
+/* -------------------- */
+
+.curtain {
+    position: absolute;
+
+    top: 0;
+
+    width: 50%;
+    height: 100%;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            90deg,
+            #50000f,
+            #79001c,
+            #630013
+        );
+
+    transition:
+        transform 1.8s cubic-bezier(
+            0.77,
+            0,
+            0.175,
+            1
+        );
+
+    will-change: transform;
+}
+
+.curtain-left {
+    left: 0;
+
+    border-right:
+        1px solid rgba(255, 214, 125, 0.08);
+}
+
+.curtain-right {
+    right: 0;
+
+    border-left:
+        1px solid rgba(255, 214, 125, 0.08);
+}
+
+/* When opening */
+
+.invitation-cover.opening .curtain-left {
+    transform: translateX(-100%);
+}
+
+.invitation-cover.opening .curtain-right {
+    transform: translateX(100%);
+}
+
+/* -------------------- */
+/* CENTER CONTENT */
+/* -------------------- */
+
+.cover-content {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+    max-width: 800px;
+
+    text-align: center;
+
+    z-index: 5;
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
+.cover-content.fade-out {
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.95);
+
+    pointer-events: none;
+}
+
+/* -------------------- */
+/* MONOGRAM */
+/* -------------------- */
+
+.monogram-wrapper {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+}
+
+.monogram {
+    width: 220px;
+    height: 220px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(221, 183, 97, 0.5);
+
+    border-radius: 50%;
+
+    color: #e3bd70;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 100px;
+
+    line-height: 1;
+
+    box-shadow:
+        inset 0 0 30px rgba(215, 175, 92, 0.08),
+        0 0 30px rgba(215, 175, 92, 0.05);
+}
+
+.floral-decoration {
+    color: #d9b66f;
+
+    font-size: 80px;
+
+    opacity: 0.8;
+}
+
+.floral-left {
+    transform: rotate(25deg);
+}
+
+.floral-right {
+    transform: scaleX(-1) rotate(25deg);
+}
+
+/* -------------------- */
+/* TEXT */
+/* -------------------- */
+
+.together-text {
+    color: #d9b66f;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 6px;
+
+    margin-bottom: 25px;
+}
+
+.cover-content h1 {
+    color: #d5aa42;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(32px, 4vw, 58px);
+
+    font-style: italic;
+
+    font-weight: 500;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.invitation-message {
+    max-width: 550px;
+
+    margin: 0 auto;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 22px;
+
+    font-style: italic;
+
+    line-height: 1.5;
+}
+
+/* -------------------- */
+/* BUTTON */
+/* -------------------- */
+
+.open-invitation-btn {
+    margin-top: 45px;
+
+    min-width: 260px;
+
+    padding: 18px 35px;
+
+    border: none;
+
+    border-radius: 40px;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            90deg,
+            #c99822,
+            #f3d778,
+            #d3a12d
+        );
+
+    color: #4d2530;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.open-invitation-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(214, 169, 52, 0.25);
+}
+
+.open-invitation-btn:disabled {
+    cursor: default;
+}
+
+/* -------------------- */
+/* CANDLES */
+/* -------------------- */
+
+.candle {
+    position: absolute;
+
+    bottom: 70px;
+
+    z-index: 6;
+}
+
+.candle-left {
+    left: 13%;
+}
+
+.candle-right {
+    right: 13%;
+}
+
+.candle-body {
+    width: 25px;
+    height: 65px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d8cfbd,
+            #fff9e9,
+            #d8cfbd
+        );
+
+    border-radius: 2px;
+}
+
+.flame {
+    position: absolute;
+
+    top: -35px;
+    left: 50%;
+
+    width: 12px;
+    height: 32px;
+
+    transform: translateX(-50%);
+
+    border-radius:
+        50% 50% 50% 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            #fff7b0 0%,
+            #ffb32c 45%,
+            transparent 70%
+        );
+
+    animation:
+        flameMove 1.2s infinite alternate;
+}
+
+@keyframes flameMove {
+    from {
+        transform:
+            translateX(-50%)
+            rotate(-3deg)
+            scale(0.95);
+    }
+
+    to {
+        transform:
+            translateX(-50%)
+            rotate(3deg)
+            scale(1.05);
+    }
+}
+
+/* -------------------- */
+/* PARTICLES */
+/* -------------------- */
+
+.particle {
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(239, 206, 143, 0.5);
+
+    animation:
+        floatParticle
+        7s infinite ease-in-out;
+}
+
+.particle-1 {
+    top: 25%;
+    left: 8%;
+}
+
+.particle-2 {
+    top: 18%;
+    left: 24%;
+
+    animation-delay: 1s;
+}
+
+.particle-3 {
+    top: 65%;
+    left: 40%;
+
+    animation-delay: 2s;
+}
+
+.particle-4 {
+    top: 28%;
+    right: 15%;
+
+    animation-delay: 3s;
+}
+
+.particle-5 {
+    bottom: 15%;
+    right: 9%;
+
+    animation-delay: 4s;
+}
+
+@keyframes floatParticle {
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0.3;
+    }
+
+    50% {
+        transform:
+            translateY(-25px)
+            rotate(180deg);
+
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .monogram {
+        width: 150px;
+        height: 150px;
+
+        font-size: 70px;
+    }
+
+    .floral-decoration {
+        font-size: 45px;
+    }
+
+    .cover-content h1 {
+        font-size: 34px;
+    }
+
+    .invitation-message {
+        font-size: 18px;
+        max-width: 300px;
+    }
+
+    .open-invitation-btn {
+        min-width: 230px;
+
+        padding: 16px 25px;
+
+        font-size: 11px;
+    }
+
+    .candle-left {
+        left: 8%;
+    }
+
+    .candle-right {
+        right: 8%;
+    }
+}

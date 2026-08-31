@@ -1,0 +1,769 @@
+/* =========================================
+   MAIN INVITATION
+========================================= */
+
+.main-invitation-wrapper {
+    position: relative;
+    min-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.main-invitation-wrapper.visible {
+    opacity: 1;
+}
+
+.main-invitation {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(214, 190, 150, 0.12),
+            transparent 30%
+        ),
+        #f8f4ed;
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+.invitation-section {
+    width: 100%;
+    padding: 100px 20px;
+}
+
+.section-container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-eyebrow {
+    display: block;
+    margin-bottom: 14px;
+    color: #70434a;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.section-header h2 {
+    color: #592634;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.section-header p {
+    max-width: 500px;
+    margin: 14px auto 0;
+    color: #705e5b;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+.ornamental-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    width: 180px;
+    margin: 70px auto 0;
+}
+
+.ornamental-divider span {
+    width: 70px;
+    height: 1px;
+    background: #d7b15f;
+}
+
+.ornamental-divider i {
+    color: #c39735;
+    font-size: 9px;
+    font-style: normal;
+}
+
+
+/* =========================================
+   TOP WEDDING CARD
+========================================= */
+
+.hero-invitation-section {
+    min-height: 100vh;
+    padding: 90px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wedding-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 55px 40px 35px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(128, 77, 70, 0.15);
+    border-radius: 22px;
+    box-shadow:
+        0 18px 50px rgba(89, 38, 52, 0.08);
+}
+
+.card-monogram {
+    width: 115px;
+    height: 115px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid #c79d4c; */
+    border-radius: 50%;
+    color: #9a7141;
+    font-family: "Great Vibes", cursive;
+    font-size: 58px;
+}
+
+.small-title {
+    color: #b58c5c;
+    font-family: "Montserrat", sans-serif;
+    font-size: 8px;
+    letter-spacing: 3px;
+}
+
+.groom-name,
+.bride-name {
+    color: #592634;
+    font-family: "Great Vibes", cursive;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.groom-name {
+    margin-top: 18px;
+}
+
+.and-symbol {
+    margin: 4px 0;
+    color: #bc964b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.wedding-date {
+    margin-top: 20px;
+    color: #846b63;
+    font-size: 13px;
+}
+
+.gold-line {
+    width: 55px;
+    height: 1px;
+    margin: 22px auto;
+    background: #c69a45;
+}
+
+.card-message {
+    color: #856f6b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.date-display {
+    margin: 25px 0 20px;
+    color: #6d4547;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.countdown-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.time-box {
+    padding: 5px 5px;
+    border: 1px solid rgba(115, 65, 61, 0.16);
+    border-radius: 8px;
+}
+
+.time-box strong {
+    display: block;
+    color: #6b3942;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.time-box span {
+    display: block;
+    margin-top: 5px;
+    color: #b39a8d;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.scroll-indicator {
+    margin-top: 45px;
+    color: #9e7c60;
+    font-family: "Montserrat", sans-serif;
+    font-size: 8px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.scroll-indicator span {
+    display: block;
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   JOURNEY
+========================================= */
+
+.journey-section {
+    padding-top: 40px;
+}
+
+.journey-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.journey-card {
+    min-height: 220px;
+    padding: 35px 25px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(100, 55, 58, 0.12);
+    border-radius: 14px;
+    box-shadow:
+        0 5px 15px rgba(89, 38, 52, 0.04);
+}
+
+.journey-icon {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+.card-label {
+    display: block;
+    color: #86665a;
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+.journey-card h3 {
+    margin: 8px 0 12px;
+    color: #653842;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.journey-card p {
+    color: #6f5b57;
+    font-size: 15px;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+.journey-bottom-text {
+    max-width: 550px;
+    margin: 30px auto 0;
+    color: #725e5a;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   EVENTS
+========================================= */
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 18px;
+}
+
+.events-grid-reception {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.event-invitation-card {
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.62);
+    border: 1px solid rgba(107, 57, 66, 0.18);
+    border-top: 2px solid #c8a15a;
+    border-radius: 14px;
+    box-shadow:
+        0 6px 20px rgba(80, 36, 45, 0.06);
+}
+
+.event-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.event-card-top h3 {
+    color: #60313b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.event-card-top span {
+    font-size: 17px;
+}
+
+.event-detail {
+    padding: 10px 0;
+    border-top: 1px solid rgba(100, 65, 60, 0.1);
+}
+
+.event-detail label {
+    display: block;
+    margin-bottom: 6px;
+    color: #80615a;
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.event-detail p {
+    color: #563f43;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.outline-btn {
+    display: block;
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px 10px;
+    border: 1px solid rgba(100, 50, 60, 0.35);
+    border-radius: 30px;
+    color: #59303a;
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-align: center;
+    transition: all 0.25s ease;
+}
+
+.outline-btn:hover {
+    background: #65303c;
+    border-color: #65303c;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   FAMILY
+========================================= */
+
+.family-card {
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 40px 35px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.58);
+    border: 1px solid rgba(101, 54, 63, 0.14);
+    border-radius: 18px;
+}
+
+.family-flower {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+
+.family-card h3 {
+    color: #64343f;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.small-gold-line {
+    width: 55px;
+    height: 1px;
+    margin: 18px auto;
+    background: #c49a50;
+}
+.family-card > p {
+    color: #695854;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 500;
+}
+.family-contacts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 30px;
+}
+
+.family-contacts > div {
+    padding: 10px;
+}
+
+.family-contacts > div:first-child {
+    border-right: 1px solid rgba(100, 50, 60, 0.12);
+}
+
+.family-contacts span,
+.family-contacts strong {
+    display: block;
+}
+
+.family-contacts span {
+    color: #805e55;
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.family-contacts strong {
+    margin-top: 8px;
+    color: #553039;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* =========================================
+   DIRECTIONS
+========================================= */
+
+.map-card {
+    position: relative;
+    overflow: hidden;
+    max-width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid rgba(90, 40, 50, 0.15);
+    background: #ddd3c5;
+}
+
+/* .map-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+.map-overlay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 12px 18px;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #60333c;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    white-space: nowrap;
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.location-pin {
+    margin-right: 6px;
+}
+
+.direction-actions {
+    display: flex;
+    gap: 15px;
+    max-width: 600px;
+    margin: 20px auto 0;
+}
+
+.direction-actions .outline-btn {
+    margin-top: 0;
+}
+
+
+/* =========================================
+   BLESSINGS
+========================================= */
+
+.blessing-form {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #603d43;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    outline: none;
+    border: 1px solid rgba(101, 55, 65, 0.14);
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.65);
+    color: #623943;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 15px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #b88b47;
+}
+
+.send-blessing-btn {
+    width: 100%;
+    padding: 15px;
+    border-radius: 7px;
+    background: #5d2635;
+    color: white;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: 0.25s ease;
+}
+
+.send-blessing-btn:hover {
+    background: #7b3a4b;
+}
+
+.wishes-list {
+    max-width: 560px;
+    margin: 30px auto 0;
+}
+
+.wish-card {
+    margin-bottom: 10px;
+    padding: 16px 20px;
+    border-left: 2px solid #c59c50;
+    border-radius: 0 8px 8px 0;
+    background: rgba(255, 255, 255, 0.48);
+}
+
+.wish-card h4 {
+    color: #673943;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.wish-card p {
+    margin-top: 6px;
+    color: #695754;
+    font-size: 14px;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.wedding-footer {
+    padding: 70px 20px;
+    text-align: center;
+    background: #421923;
+    color: white;
+    border-top: 1px solid rgba(205, 162, 76, 0.35);
+}
+
+.footer-flower {
+    margin-bottom: 18px;
+    color: #d3a846;
+    font-size: 22px;
+}
+
+.wedding-footer h2 {
+    color: #d8b75c;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.wedding-footer h2 span {
+    margin: 0 7px;
+    font-family: "Great Vibes", cursive;
+    font-size: 32px;
+}
+
+.wedding-footer p {
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "Montserrat", sans-serif;
+    font-size: 8px;
+    letter-spacing: 1.5px;
+}
+
+.footer-links a:hover {
+    color: #d8b75c;
+}
+
+.wedding-footer small {
+    color: rgba(255, 255, 255, 0.35);
+    font-family: "Montserrat", sans-serif;
+    font-size: 7px;
+    letter-spacing: 1.5px;
+    line-height: 2;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .invitation-section {
+        padding: 75px 16px;
+    }
+
+    .hero-invitation-section {
+        padding: 70px 16px 50px;
+    }
+
+    .wedding-card {
+        padding: 40px 20px 25px;
+    }
+
+    .groom-name,
+    .bride-name {
+        font-size: 48px;
+    }
+
+    .section-header h2 {
+        font-size: 29px;
+    }
+
+    .journey-grid,
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-card {
+        min-height: auto;
+    }
+
+    .family-card {
+        padding: 35px 20px;
+    }
+
+    .map-card {
+        height: 300px;
+    }
+
+    .direction-actions {
+        gap: 10px;
+    }
+
+    .direction-actions .outline-btn {
+        font-size: 6px;
+    }
+
+    .footer-links {
+        gap: 14px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .countdown-container {
+        gap: 5px;
+    }
+
+    .time-box {
+        padding: 10px 3px;
+    }
+
+    .time-box strong {
+        font-size: 17px;
+    }
+
+    .family-contacts {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .family-contacts > div:first-child {
+        border-right: none;
+        border-bottom:
+            1px solid rgba(100, 50, 60, 0.12);
+    }
+}
+
+/* =========================================
+   READABILITY IMPROVEMENTS
+========================================= */
+
+.invitation-section p {
+    color: #6d5a56;
+}
+
+.invitation-section {
+    text-rendering: optimizeLegibility;
+}
+
+.event-detail p,
+.journey-card p,
+.family-card p,
+.wish-card p {
+    font-weight: 500;
+}

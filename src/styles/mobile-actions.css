@@ -1,0 +1,419 @@
+/* =====================================================
+   MOBILE ACTION BAR
+===================================================== */
+
+.mobile-action-bar {
+    display: none;
+}
+
+
+/* =====================================================
+   MOBILE CONTACT MODAL
+===================================================== */
+
+.mobile-contact-modal {
+    display: none;
+}
+
+
+/* =====================================================
+   MOBILE ONLY
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* -----------------------------------------------
+       STICKY BOTTOM BAR
+    ------------------------------------------------ */
+
+    .mobile-action-bar {
+        position: fixed;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        width: 100%;
+
+        display: flex;
+
+        gap: 12px;
+
+        padding:
+            10px
+            14px
+            calc(10px + env(safe-area-inset-bottom));
+
+        background: rgba(255, 250, 246, 0.98);
+
+        border-top: 1px solid rgba(95, 45, 55, 0.12);
+
+        box-shadow:
+            0 -5px 20px
+            rgba(70, 30, 40, 0.10);
+
+        z-index: 9998;
+
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+
+    /* -----------------------------------------------
+       ACTION BUTTONS
+    ------------------------------------------------ */
+
+    .mobile-action-btn {
+        flex: 1;
+
+        min-height: 46px;
+
+        border: none;
+
+        border-radius: 9px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 7px;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 12px;
+
+        font-weight: 700;
+
+        letter-spacing: 0.4px;
+
+        cursor: pointer;
+
+        transition:
+            transform 0.2s ease,
+            opacity 0.2s ease;
+    }
+
+
+    .mobile-action-btn:active {
+        transform: scale(0.96);
+    }
+
+
+    .action-icon {
+        font-size: 15px;
+    }
+
+
+    /* Call */
+
+    .call-btn {
+        background: #642936;
+
+        color: #ffffff;
+    }
+
+
+    /* WhatsApp */
+
+    .whatsapp-btn {
+        background: #748461;
+
+        color: #ffffff;
+    }
+
+
+    /* -----------------------------------------------
+       CONTACT MODAL BACKDROP
+    ------------------------------------------------ */
+
+    .mobile-contact-modal {
+        position: fixed;
+
+        inset: 0;
+
+        display: flex;
+
+        align-items: flex-end;
+        justify-content: center;
+
+        background:
+            rgba(25, 10, 15, 0.55);
+
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+
+        z-index: 10010;
+
+        animation:
+            modalBackdropIn
+            0.25s ease
+            forwards;
+    }
+
+
+    /* -----------------------------------------------
+       BOTTOM SHEET
+    ------------------------------------------------ */
+
+    .mobile-contact-sheet {
+        width: 100%;
+
+        max-width: 600px;
+
+        padding:
+            14px
+            22px
+            calc(
+                20px +
+                env(safe-area-inset-bottom)
+            );
+
+        background: #fffaf5;
+
+        border-radius:
+            28px
+            28px
+            0
+            0;
+
+        box-shadow:
+            0 -10px 40px
+            rgba(50, 20, 30, 0.20);
+
+        text-align: center;
+
+        animation:
+            sheetSlideUp
+            0.35s
+            cubic-bezier(
+                0.22,
+                1,
+                0.36,
+                1
+            )
+            forwards;
+    }
+
+
+    /* -----------------------------------------------
+       SHEET HANDLE
+    ------------------------------------------------ */
+
+    .sheet-handle {
+        width: 45px;
+        height: 4px;
+
+        margin: 0 auto 18px;
+
+        border-radius: 20px;
+
+        background: #d7c3bd;
+    }
+
+
+    /* -----------------------------------------------
+       TITLE
+    ------------------------------------------------ */
+
+    .mobile-contact-sheet h3 {
+        margin: 0;
+
+        color: #642936;
+
+        font-family: Georgia, serif;
+
+        font-size: 22px;
+
+        font-weight: 500;
+    }
+
+
+    .sheet-subtitle {
+        margin:
+            8px
+            0
+            24px;
+
+        color: #967e7a;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+
+    /* -----------------------------------------------
+       CONTACT OPTIONS
+    ------------------------------------------------ */
+
+    .contact-options {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 14px;
+    }
+
+
+    .contact-option {
+        width: 100%;
+
+        min-height: 58px;
+
+        padding:
+            14px
+            18px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 4px;
+
+        border: 1px solid #ddc5bf;
+
+        border-radius: 15px;
+
+        background: #fffaf7;
+
+        text-decoration: none;
+
+        transition:
+            background 0.2s ease,
+            transform 0.2s ease;
+    }
+
+
+    .contact-option:active {
+        transform: scale(0.98);
+
+        background: #f8eee9;
+    }
+
+
+    .contact-name {
+        color: #6b3040;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 16px;
+
+        font-weight: 700;
+    }
+
+
+    .contact-number {
+        color: #7d6663;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 14px;
+
+        font-weight: 500;
+    }
+
+
+    /* -----------------------------------------------
+       CANCEL
+    ------------------------------------------------ */
+
+    .sheet-cancel {
+        margin-top: 25px;
+
+        padding:
+            10px
+            30px;
+
+        border: none;
+
+        background: transparent;
+
+        color: #a58c87;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 13px;
+
+        font-weight: 600;
+
+        letter-spacing: 1px;
+
+        cursor: pointer;
+    }
+
+
+    /* -----------------------------------------------
+       ANIMATIONS
+    ------------------------------------------------ */
+
+    @keyframes sheetSlideUp {
+
+        from {
+            transform: translateY(100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
+
+    @keyframes modalBackdropIn {
+
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .mobile-action-bar {
+        gap: 8px;
+
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    .mobile-action-btn {
+        font-size: 11px;
+
+        min-height: 44px;
+    }
+
+
+    .action-icon {
+        font-size: 14px;
+    }
+
+
+    .mobile-contact-sheet {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .main-invitation-wrapper {
+        padding-bottom: 75px;
+    }
+
+}
