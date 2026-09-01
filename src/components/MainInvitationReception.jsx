@@ -11,7 +11,7 @@ function MainInvitationReception({ type }) {
     return (
         <div className="main-invitation">
 
-            <WeddingCard />
+            <WeddingCard type={type}/>
 
             <div id="journey">
                 <Journey />

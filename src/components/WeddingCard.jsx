@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 
-function WeddingCard() {
-    const targetDate = new Date(
+function WeddingCard({type}) {
+    const targetDate = type=="WR" ?  new Date(
         "2026-11-25T19:00:00"
-    );
+    ) : new Date(
+        "2026-11-27T19:00:00"
+    )
 
     const calculateTime = () => {
         const now = new Date();
@@ -89,7 +91,7 @@ function WeddingCard() {
                 </p>
 
                 <h3 className="date-display">
-                    NOVEMBER 25, 2026
+                    NOVEMBER {type=="WR" ? 25 : 27}, 2026
                 </h3>
 
                 <div className="countdown-container">
